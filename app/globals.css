@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+@layer components {
+  .headerTopMenu {
+    @apply flex items-center gap-x-1 border-r border-r-gray-200 px-4;
+  }
+}
