@@ -4,6 +4,7 @@ import Image from "next/image";
 import SearchInput from "../SearchInput/SearchInput";
 import Link from "next/link";
 import { LiaUser } from "react-icons/lia";
+import HeaderIcons from "../HeadersIcon/HeaderIcons";
 
 export default function MiddleHeader() {
   return (
@@ -13,7 +14,7 @@ export default function MiddleHeader() {
           <Image src={Logo} alt="logo" width={80} height={80} />
         </Link>
         <SearchInput />
-        <div>
+        <div className="hidden md:inline-flex items-center gap-4">
           {/* user */}
           <Link className="flex items-center gap-2 text-sm" href="/signin">
             <div className="border border-gray-700 rounded-full p-1.5 text-xl">
@@ -25,6 +26,7 @@ export default function MiddleHeader() {
             </div>
           </Link>
           {/* header icon */}
+          <HeaderIcons />
         </div>
       </Container>
     </div>
