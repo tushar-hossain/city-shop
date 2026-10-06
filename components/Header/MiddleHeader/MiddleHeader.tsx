@@ -14,8 +14,7 @@ export default function MiddleHeader() {
         <Container className="flex items-center justify-between gap-4 md:gap-6 lg:gap-20">
           <Link href="/">
             <Image
-              placeholder="blur"
-              loading="lazy"
+              priority={true}
               src={Logo}
               alt="logo"
               width={80}
