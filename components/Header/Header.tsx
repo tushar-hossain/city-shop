@@ -5,10 +5,10 @@ import BottomHeader from "./BottomHeader/BottomHeader";
 
 export default function Header() {
   return (
-    <div>
+    <>
       <TopHeader />
       <MiddleHeader />
       <BottomHeader />
-    </div>
+    </>
   );
 }
