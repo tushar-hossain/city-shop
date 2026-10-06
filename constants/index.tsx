@@ -1,4 +1,4 @@
-import { bannerImageOne } from "@/public/BannerImage/Image";
+import { bannerImageOne } from "@/public/assets/Image";
 
 export const navigation = [
   { title: "Home", href: "/" },

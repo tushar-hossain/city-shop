@@ -1,11 +1,11 @@
 import Container from "@/components/Container/Container";
-import { Logo } from "@/public/BannerImage/Image";
 import Image from "next/image";
 import SearchInput from "../SearchInput/SearchInput";
 import Link from "next/link";
 import { LiaUser } from "react-icons/lia";
 import HeaderIcons from "../HeadersIcon/HeaderIcons";
 import MobileNavigation from "../MobileNavigation/MobileNavigation";
+import { Logo } from "@/public/assets/Image";
 
 export default function MiddleHeader() {
   return (
