@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { FaFacebook, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { twMerge } from "tailwind-merge";
 
-export default function SocialLink() {
+export default function SocialLink({
+  className,
+  iconStyle,
+}: {
+  className?: string;
+  iconStyle?: string;
+}) {
   const linksData = [
     { icon: <FaGithub />, href: "https://github.com/tushar-hossain" },
     { icon: <FaFacebook />, href: "https://www.facebook.com/" },
@@ -12,10 +19,18 @@ export default function SocialLink() {
     },
   ];
   return (
-    <div className="flex items-center flex-wrap py-2 text-white/50 gap-x-2">
+    <div
+      className={twMerge(
+        "flex items-center flex-wrap py-2 text-white/50 gap-x-2",
+        className,
+      )}
+    >
       {linksData?.map((social, index) => (
         <Link
-          className="border border-white/20 rounded-full inline-flex p-2 hover:text-brand-skyColor hover:border-brand-skyColor duration-300 cursor-pointer"
+          className={twMerge(
+            "border border-white/20 rounded-full inline-flex p-2 hover:text-brand-skyColor hover:border-brand-skyColor duration-300 cursor-pointer",
+            iconStyle,
+          )}
           key={index}
           href={social?.href}
           target="_blank"
