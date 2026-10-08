@@ -8,6 +8,7 @@
   --color-brand-borderColor: #eaebed;
   --color-brand-skyColor: #0989ff;
   --color-brand-lightText: #55585b;
+  --color-brand-amazonOrangeDark: #e68a00;
 }
 @layer components {
   .headerTopMenu {

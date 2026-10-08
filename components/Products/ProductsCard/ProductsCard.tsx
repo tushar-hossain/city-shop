@@ -40,7 +40,7 @@ export default function ProductsCard({ product }: Props) {
         </div>
       </div>
       {/* card button */}
-      <AddToCartButton />
+      <AddToCartButton product={product} />
     </div>
   );
 }
