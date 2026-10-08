@@ -13,7 +13,7 @@ export default function ProductsCard({ product }: Props) {
   return (
     <div className="border border-gray-400 hover:shadow-lg hover:shadow-black/30 duration-300 rounded-md group overflow-hidden relative">
       {/* image */}
-      <Link href={"/products"}>
+      <Link href={`/products/${product?.id}`}>
         <Image
           className="w-full h-64 object-contain hover:scale-110 duration-200"
           src={product?.images[0]}
@@ -40,7 +40,7 @@ export default function ProductsCard({ product }: Props) {
         </div>
       </div>
       {/* card button */}
-      <AddToCartButton />
+      <AddToCartButton product={product} />
     </div>
   );
 }
