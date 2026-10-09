@@ -5,7 +5,7 @@ export default function MainLoader() {
         <span className="w-14 h-14 border-8 border-r-brand-skyColor border-l-border border-b-brand-borderColor border-l-brand-borderColor rounded-full absolute -top-2 -left-2 animate-spin" />
       </span>
       <p className="text-lg text-center font-semibold tracking-wide text-brand-themeColor">
-        Loading ...
+        Loading...
       </p>
     </div>
   );
