@@ -4,16 +4,21 @@ import { Product, StateType } from "@/type";
 import { useMemo } from "react";
 import toast from "react-hot-toast";
 import { FaShoppingCart } from "react-icons/fa";
+import { IoCartOutline } from "react-icons/io5";
 import { LuEye } from "react-icons/lu";
 import { MdFavorite, MdFavoriteBorder } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Sidebar({ product }: { product: Product }) {
-  const { favorite } = useSelector((state: StateType) => state?.cityShop);
+  const { favorite, cart } = useSelector((state: StateType) => state?.cityShop);
   const dispatch = useDispatch();
   const isExistingFavorite = useMemo(
     () => favorite?.some((item) => item?.id === product?.id),
     [favorite, product?.id],
+  );
+  const isExistingCart = useMemo(
+    () => cart?.some((item) => item?.id === product?.id),
+    [cart, product?.id],
   );
 
   const handleAddToCart = () => {
@@ -38,9 +43,14 @@ export default function Sidebar({ product }: { product: Product }) {
     <div className=" absolute right-2 bottom-44 border flex flex-col text-2xl border-brand-borderColor bg-white rounded-md overflow-hidden transform translate-x-20 group-hover:translate-x-0 duration-300">
       <button
         onClick={handleAddToCart}
+        disabled={isExistingCart}
         className="cursor-pointer p-2 hover:bg-brand-skyColor/20 hover:text-brand-skyColor duration-200"
       >
-        <FaShoppingCart />
+        {isExistingCart ? (
+          <FaShoppingCart className="text-brand-skyColor" />
+        ) : (
+          <IoCartOutline />
+        )}
       </button>
       <button
         onClick={() => {}}
