@@ -48,7 +48,7 @@ export type Product = {
 export interface StateType {
   cityShop: {
     cart: Product[];
-    favorit: Product[];
+    favorite: Product[];
     userInfo: null;
   };
 }

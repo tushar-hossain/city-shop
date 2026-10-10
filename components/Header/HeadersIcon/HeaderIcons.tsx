@@ -5,14 +5,14 @@ import { MdFavoriteBorder, MdOutlineShoppingBag } from "react-icons/md";
 import { useSelector } from "react-redux";
 
 export default function HeaderIcons() {
-  const { cart, favorit } = useSelector((state: StateType) => state?.cityShop);
+  const { cart, favorite } = useSelector((state: StateType) => state?.cityShop);
 
   return (
     <>
       <Link className="relative" href="/favorite">
         <MdFavoriteBorder className="text-2xl" />
         <span className="absolute -top-1 -right-1 text-[10px] font-medium text-white rounded-full flex items-center  w-4 h-4 bg-brand-themeColor justify-center">
-          {favorit?.length > 0 ? favorit?.length : "0"}
+          {favorite?.length > 0 ? favorite?.length : "0"}
         </span>
       </Link>
       <Link className="relative" href="/cart">
