@@ -26,7 +26,7 @@ export default function ProductsCard({ product }: Props) {
         </p>
       </Link>
       {/* sidebar */}
-      <Sidebar />
+      <Sidebar product={product} />
       {/* details */}
       <div className="border-t border-t-brand-borderColor py-2 px-4 flex justify-between h-25">
         <div>
