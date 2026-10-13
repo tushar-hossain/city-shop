@@ -20,6 +20,7 @@ export default function Footer() {
               alt="logo"
               width={70}
               height={70}
+              loading="eager"
             />
           </Link>
           <p>

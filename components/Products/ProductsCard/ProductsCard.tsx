@@ -20,13 +20,14 @@ export default function ProductsCard({ product }: Props) {
           alt="product image"
           width={500}
           height={500}
+          loading="eager"
         />
         <p className="absolute top-2 right-2 bg-red-500 text-white py-1 px-2 text-xs rounded-lg">
           {product?.discountPercentage}$
         </p>
       </Link>
       {/* sidebar */}
-      <Sidebar />
+      <Sidebar product={product} />
       {/* details */}
       <div className="border-t border-t-brand-borderColor py-2 px-4 flex justify-between h-25">
         <div>

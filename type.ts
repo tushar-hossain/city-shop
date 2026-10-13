@@ -42,4 +42,13 @@ export type Product = {
   meta: ProductMeta;
   images: string[];
   thumbnail: string;
+  quantity?: number;
 };
+
+export interface StateType {
+  cityShop: {
+    cart: Product[];
+    favorite: Product[];
+    userInfo: null;
+  };
+}

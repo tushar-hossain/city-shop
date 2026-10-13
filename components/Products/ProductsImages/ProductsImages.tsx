@@ -20,7 +20,8 @@ export default function ProductsImages({ singleProducts }: Props) {
             alt="Products image"
             width={200}
             height={200}
-            priority
+            priority={true}
+            loading="eager"
           />
         ))}
       </div>
@@ -31,7 +32,8 @@ export default function ProductsImages({ singleProducts }: Props) {
           alt="Products image"
           width={500}
           height={500}
-          priority
+          priority={true}
+          loading="eager"
         />
       </div>
     </div>

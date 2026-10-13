@@ -27,7 +27,7 @@ export default function Banner() {
             Shop Now <GoArrowRight className="text-lg" />
           </Button>
         </div>
-        <Image src={banner?.image} alt="banner image" priority={true} />
+        <Image loading="eager" src={banner?.image} alt="banner image" priority={true} />
       </Container>
     </div>
   );
