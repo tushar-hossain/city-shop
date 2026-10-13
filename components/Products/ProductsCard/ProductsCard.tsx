@@ -20,6 +20,7 @@ export default function ProductsCard({ product }: Props) {
           alt="product image"
           width={500}
           height={500}
+          loading="eager"
         />
         <p className="absolute top-2 right-2 bg-red-500 text-white py-1 px-2 text-xs rounded-lg">
           {product?.discountPercentage}$

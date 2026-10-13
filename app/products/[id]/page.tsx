@@ -21,7 +21,7 @@ export default async function ProductsDetails({ params }: Props) {
   const singleProducts: Product = await GetData(
     `https://dummyjson.com/products/${id}`,
   );
-
+console.log(singleProducts)
   return (
     <Container className="py-10 grid grid-cols-1 md:grid-cols-2 gap-10">
       {/* products image */}
@@ -56,7 +56,7 @@ export default async function ProductsDetails({ params }: Props) {
         </p>
         <p>
           You are saving{" "}
-          {<PriceFormate amount={singleProducts?.discountPercentage / 100} />}{" "}
+          {<PriceFormate amount={singleProducts?.price * (singleProducts.discountPercentage/100) } className="text-green-500" />}{" "}
           upon purchase
         </p>
         <div>
@@ -92,6 +92,7 @@ export default async function ProductsDetails({ params }: Props) {
         <div className="bg-[#f7f2f2] p-4 flex flex-col items-center rounded-md">
           <Image
             src={paymentImage}
+            loading="eager"
             alt="payment image"
             className="object-cover"
             width={250}

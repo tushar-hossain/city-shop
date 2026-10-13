@@ -19,6 +19,7 @@ export default function MiddleHeader() {
               alt="logo"
               width={80}
               height={80}
+              loading="eager"
             />
           </Link>
           <SearchInput />

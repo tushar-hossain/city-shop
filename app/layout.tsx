@@ -27,18 +27,20 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <Layouts>
-        <Header />
-        <body className="min-h-full flex flex-col">{children}</body>
-        <Footer />
-        <Toaster
-          position="bottom-right"
-          toastOptions={{
-            duration: 3000,
-            style: { background: "#00000", color: "#fffff" },
-          }}
-        />
-      </Layouts>
+      <body className="min-h-full flex flex-col">
+        <Layouts>
+          <Header />
+          {children}
+          <Footer />
+          <Toaster
+            position="bottom-right"
+            toastOptions={{
+              duration: 3000,
+              style: { background: "#00000", color: "#fffff" },
+            }}
+          />
+        </Layouts>
+      </body>
     </html>
   );
 }
