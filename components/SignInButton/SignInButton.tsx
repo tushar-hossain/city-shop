@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function SignInButton() {
   const { data: session } = useSession();
-  console.log(session);
+
   return (
     <>
       {session?.user ? (
