@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <Title>Information</Title>
+          {/* <Title>Information</Title>
           <div className="mt-3 flex flex-col gap-y-2">
             {navigation?.map((item) => (
               <Link
@@ -57,7 +57,7 @@ export default function Footer() {
                 {item?.title}
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div>
