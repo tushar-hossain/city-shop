@@ -41,3 +41,22 @@ export async function getCategoriesWithMeta(): Promise<{
 
   return { categories, totalProducts: products?.length ?? 0, totalBrands };
 }
+
+export async function getProductsByCategory(
+  limit = 4,
+): Promise<{ category: Category; products: Product[] }[]> {
+  const [categoryList, { products }]: [Category[], { products: Product[] }] =
+    await Promise.all([
+      GetData("https://dummyjson.com/products/categories"),
+      GetData("https://dummyjson.com/products?limit=0"),
+    ]);
+
+  return categoryList
+    ?.map((category) => ({
+      category,
+      products: products
+        ?.filter((item) => item.category === category.slug)
+        .slice(0, limit),
+    }))
+    .filter((group) => group.products?.length);
+}

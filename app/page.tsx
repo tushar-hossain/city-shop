@@ -1,14 +1,14 @@
 import Banner from "@/components/Banner/Banner";
-import Products from "@/components/Products/ProductsListData/ProductsListData";
-import GetData from "@/helpers";
+import CategoryProducts from "@/components/Products/CategoryProducts/CategoryProducts";
+import { getProductsByCategory } from "@/helpers";
 
 export default async function Home() {
-  const { products } = await GetData("https://dummyjson.com/products");
+  const groups = await getProductsByCategory();
 
   return (
     <main>
       <Banner />
-      <Products products={products} />
+      <CategoryProducts groups={groups} />
     </main>
   );
 }
