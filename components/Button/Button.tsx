@@ -27,8 +27,8 @@ export default function Button({
           {children}
         </Link>
       ) : (
-          <button
-            onClick={()=> onClick}
+        <button
+          onClick={onClick}
           className={twMerge(
             "bg-brand-themeColor/80 text-white py-2 px-6 hover:bg-brand-themeColor cursor-pointer duration-200",
             className,
