@@ -52,3 +52,14 @@ export interface StateType {
     userInfo: null;
   };
 }
+
+export type Category = {
+  slug: string;
+  name: string;
+  url: string;
+};
+
+export type CategoryWithMeta = Category & {
+  count: number;
+  image: string;
+};
